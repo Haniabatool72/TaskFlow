@@ -1,0 +1,28 @@
+:root{--bg:#eaf6f2;--ink:#12332c;--card:#fff;--brand:#0f8b6d;--line:#cfe5dd;--high:#e5484d;--medium:#f0a020;--low:#3e9bd8}
+@media (prefers-color-scheme:dark){:root{--bg:#0e1f1b;--ink:#e6f5f0;--card:#173029;--line:#28493f}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",Tahoma,system-ui,sans-serif;line-height:1.5}
+.app{max-width:600px;margin:0 auto;padding:28px 16px;min-height:100vh;display:flex;flex-direction:column}
+h1{margin:0;font-size:2rem;color:var(--brand)}
+.summary{margin:2px 0 20px;opacity:.75}
+.add{display:flex;gap:8px;flex-wrap:wrap}
+input,select,button{font:inherit;color:inherit}
+input,select{padding:11px 12px;border:2px solid var(--line);border-radius:10px;background:var(--card)}
+input{flex:1;min-width:180px}
+:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+.primary{padding:11px 18px;border:0;border-radius:10px;background:var(--brand);color:#fff;font-weight:600;cursor:pointer}
+.error{color:var(--high);min-height:1.4em;margin:6px 0}
+.filters{display:flex;gap:6px;margin:6px 0 14px}
+.filter{padding:6px 16px;border:2px solid var(--line);background:transparent;border-radius:99px;cursor:pointer}
+.filter.active{background:var(--brand);border-color:var(--brand);color:#fff}
+.list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.task{display:flex;align-items:center;gap:12px;background:var(--card);border:2px solid var(--line);border-left-width:6px;border-radius:12px;padding:10px 12px}
+.task.high{border-left-color:var(--high)}.task.medium{border-left-color:var(--medium)}.task.low{border-left-color:var(--low)}
+.task input[type=checkbox]{width:20px;height:20px;accent-color:var(--brand);cursor:pointer}
+.task span{flex:1;word-break:break-word}
+.task.done span{text-decoration:line-through;opacity:.5}
+.del{border:0;background:transparent;cursor:pointer;font-size:1.2rem;color:var(--high);padding:4px 8px}
+.empty{text-align:center;opacity:.7;padding:24px 0}
+.hidden{display:none}
+.link{align-self:flex-start;margin-top:16px;background:none;border:0;color:var(--brand);text-decoration:underline;cursor:pointer}
+footer{margin-top:auto;padding-top:28px;text-align:center;font-size:.9rem;opacity:.8}

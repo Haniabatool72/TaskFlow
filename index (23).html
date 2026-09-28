@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TaskFlow - To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>TaskFlow</h1>
+      <p id="summary" class="summary"></p>
+    </header>
+
+    <div class="add">
+      <input id="input" type="text" placeholder="What do you need to do?" maxlength="100" aria-label="New task">
+      <select id="priority" aria-label="Priority">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+      <button id="addBtn" class="primary">Add task</button>
+    </div>
+    <p id="error" class="error" role="alert"></p>
+
+    <div class="filters" role="group" aria-label="Filter tasks">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="active">Active</button>
+      <button class="filter" data-filter="done">Done</button>
+    </div>
+
+    <ul id="list" class="list"></ul>
+    <p id="empty" class="empty hidden">No tasks here. Add your first task above.</p>
+
+    <button id="clear" class="link">Clear completed tasks</button>
+
+    <footer>Developed by HANIA BATOOL</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
